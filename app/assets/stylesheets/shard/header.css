@@ -22,4 +22,31 @@
   font-size: 40px;
   color: #ffffff;
   text-decoration: none;
+  font-weight: bold;
+}
+
+.lists-right{
+  display:flex;
+  justify-content: flex-end;
+  list-style: none;
+  width: 100vw;
+}
+
+.login{
+  text-decoration: none;
+  color:#64a19b;
+  font-size: 30px;
+  border: solid #ffffff;
+  background: #ffffff;
+  border-radius: 10px;
+  margin-right: 35px;
+}
+
+.sign-up{
+  text-decoration: none;
+  color:#64a19b;
+  font-size: 30px;
+  border: solid #ffffff;
+  background: #ffffff;
+  border-radius: 10px;
 }
