@@ -54,3 +54,8 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'pry-rails'
+
+# 本番環境（Render）のデータベース（PostgreSQL）を使用できるようGemを追加（このGemはデータベースがPostgreSQLの際に必要なGem）
+group :production do
+  gem 'pg'
+end
