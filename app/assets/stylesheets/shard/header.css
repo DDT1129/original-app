@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+.top-page-header {
+  width: 100vw;
+  padding: 2vh 15vw;
+  display: flex;
+  flex-direction: column;
+  background-color: #9be8e0;
+}
+
+.top-page-h-contents{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-icon{
+  width: 10vw;
+  margin-right: 10vw;
+  font-size: 40px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.lists-right{
+  display:flex;
+  justify-content: flex-end;
+  list-style: none;
+  width: 100vw;
+}
+
+.login{
+  text-decoration: none;
+  color:#64a19b;
+  font-size: 30px;
+  border: solid #ffffff;
+  background: #ffffff;
+  border-radius: 10px;
+  margin-right: 35px;
+}
+
+.sign-up{
+  text-decoration: none;
+  color:#64a19b;
+  font-size: 30px;
+  border: solid #ffffff;
+  background: #ffffff;
+  border-radius: 10px;
+}
