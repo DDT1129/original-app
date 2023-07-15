@@ -1,7 +1,9 @@
 .top-page-footer{
   width: 100vw;
+  height: 15vh;
   background:#1a5612;
-  transform: translateY(-20px);
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .footer-page-contents{
@@ -24,7 +26,8 @@
 .top-page-footer-second{
   width: 100vw;
   background:#1a5612;
-  transform: translateY(-38px);
+  margin: 0;
+  
 }
 
 .footer-page-icons{
@@ -36,4 +39,5 @@
 .footer-logo{
   color:#ffffff;
   padding-right: 30px;
+  padding-bottom: 5px;
 }
