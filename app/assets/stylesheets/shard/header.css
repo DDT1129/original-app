@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-.top-page-header {
+.top-page-header{
   width: 100vw;
   padding: 2vh 15vw;
   display: flex;
@@ -11,9 +11,15 @@
 }
 
 .top-page-h-contents{
+  width: 75vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.app-ping-icon{
+  width: 5vw;
+  border-radius: 50px;
 }
 
 .header-icon{
