@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   def basic_auth
     authenticate_or_request_with_http_basic do |username, password|
-      username == 'dt' && password == '1129'
+      username == ENV["BASIC_AUTH_ORIGINAL_USER"] && password == ENV["BASIC_AUTH_ORIGINAL_PASSWORD"]
     end
   end
 
