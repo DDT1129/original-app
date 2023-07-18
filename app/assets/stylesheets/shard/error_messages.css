@@ -1,0 +1,13 @@
+.error-alert {
+  display: flex;
+  justify-content: center;
+  border: 5px solid red ;
+  
+}
+
+.error-message {
+  font-size: 1.3vw;
+  font-weight: bold;
+  list-style: decimal;
+  color: rgb(255, 68, 0);
+}
