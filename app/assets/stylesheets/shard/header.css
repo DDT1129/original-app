@@ -57,3 +57,22 @@
   background: #ffffff;
   border-radius: 10px;
 }
+
+.user-nickname{
+  text-decoration: none;
+  color:#64a19b;
+  font-size: 30px;
+  border: solid #ffffff;
+  background: #ffffff;
+  border-radius: 10px;
+  margin-right: 35px;
+}
+
+.logout{
+  text-decoration: none;
+  color:#64a19b;
+  font-size: 30px;
+  border: solid #ffffff;
+  background: #ffffff;
+  border-radius: 10px;
+}
