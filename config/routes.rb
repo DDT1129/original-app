@@ -8,5 +8,5 @@ Rails.application.routes.draw do
     
 
   root to: "situations#index"
-  resources :situations, only: :index
+  resources :situations
 end
