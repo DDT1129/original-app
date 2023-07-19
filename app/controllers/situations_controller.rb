@@ -8,11 +8,16 @@ class SituationsController < ApplicationController
   end
 
   def create
-    Situation.create(situation_params)
+    @situation = Situation.new(situation_params)
+    if @situation.save
+      redirect_to root_path
+    else
+      render :new  
+    end
   end
 
   private
   def situation_params
-    params.require(:situation).permit(:situation, :purpose)
+    params.require(:situation).permit(:purpose, :genre_id)
   end
 end

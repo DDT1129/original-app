@@ -6,7 +6,7 @@
     <%= flash[:alert] %>
   </div>
     <h2 class="container_title">外出・帰宅のどちらかを選択してください</h2>
-    <%= form_with model: @situation, url: new_situation_path, class: "situation-form", local: true do |f| %>
+    <%= form_with(model: @situation, local: true) do |f| %>
 
       <div class="field">
         <div class='form-text-wrap'>

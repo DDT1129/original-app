@@ -4,9 +4,8 @@ class CreateSituations < ActiveRecord::Migration[6.0]
 
       t.timestamps
 
-      t.string  :situation,           null: false
-      t.string  :purpose
       
+      t.string  :purpose
       t.integer :genre_id,            null: false
 
     end
