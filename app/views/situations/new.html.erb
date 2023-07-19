@@ -2,9 +2,7 @@
 
 <div class="contents_row">
   <div class="container">
-  <div class='login-flash-message'>
-    <%= flash[:alert] %>
-  </div>
+  <%= render 'shared/error_messages', model: @situation %>
     <h2 class="container_title">外出・帰宅のどちらかを選択してください</h2>
     <%= form_with(model: @situation, local: true) do |f| %>
 
