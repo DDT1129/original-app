@@ -18,6 +18,6 @@ class SituationsController < ApplicationController
 
   private
   def situation_params
-    params.require(:situation).permit(:purpose, :genre_id)
+    params.require(:situation).permit(:purpose, :genre_id, :user_id).merge(user_id: current_user.id)
   end
 end
