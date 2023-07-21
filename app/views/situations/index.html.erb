@@ -31,6 +31,32 @@
   </div>
   <%# アプリ機能一覧 %>
 
-
+  <%# 外出・帰宅の一覧を表示 %>
+  <h1>Family Members</h1>
+  <ul class='situations-display'>
+    <% @situations.each do |s| %>
+      <li class='list'>
+      <h3 class="family-name">
+        <%= s.user.nickname %>
+      </h3>
+      <div class="home-away-purpose">
+        <%= s.genre.name %><%= "(" + s.purpose + ")" %>
+      </div>
+      <div class="datetime">
+        <% if (@now - s.created_at) <= 60 * 60 %>
+          <%=((@now - s.created_at) / 60).to_i.to_s + "分前" %>
+        <% elsif (@now - s.created_at) <= 60 * 60 * 24 %>
+          <%=((@now - s.created_at) / 3600).to_i.to_s + "時間前" %>
+        <% elsif (@today - s.created_at.to_date) <= 30 %>
+          <%= (@today - s.created_at.to_date).to_i.to_s + "日前" %>
+        <% else %>
+          <%= s.created_at.strftime('%Y-%m-%d') %> 
+        <% end %>  
+     
+        <%= s.created_at.strftime(' %m月%d日 %H時%M分(%A)' ) %> </div>
+      </li>
+    <% end %>
+  </ul>
+  <%# 外出・帰宅の一覧を表示 %>
 </div>
 <%= render "shared/footer" %>
