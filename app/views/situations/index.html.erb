@@ -32,10 +32,11 @@
   <%# アプリ機能一覧 %>
 
   <%# 外出・帰宅の一覧を表示 %>
-  <h1>Family Members</h1>
-  <ul class='situations-display'>
+  <% if user_signed_in? %>
+  <h1 class="family-members">Family Members</h1>
+  <ul class='family-display'>
     <% @situations.each do |s| %>
-      <li class='list'>
+      <li class='display-list'>
       <h3 class="family-name">
         <%= s.user.nickname %>
       </h3>
@@ -57,6 +58,7 @@
       </li>
     <% end %>
   </ul>
+  <% end %>
   <%# 外出・帰宅の一覧を表示 %>
 </div>
 <%= render "shared/footer" %>
