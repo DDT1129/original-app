@@ -3,7 +3,13 @@ class SituationsController < ApplicationController
   def index
     @today = Date.today #今日の日付を取得
     @now = Time.now     #現在時刻を取得
-    @situations = Situation.all.order('created_at DESC')
+    
+    # []を作って、userモデルからデータを持ってくる（登録ユーザーを表示するため）、最新の表示だけに設定   
+    @situations = [] 
+    User.all.each do |user| 
+      latest_situation = user.situations.order(created_at: :desc).first
+      @situations << latest_situation if latest_situation
+    end
   end
 
   def new
