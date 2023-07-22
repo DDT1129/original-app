@@ -3,7 +3,7 @@ class SituationsController < ApplicationController
   def index
     @today = Date.today #今日の日付を取得
     @now = Time.now     #現在時刻を取得
-    @situations = Situation.all
+    @situations = Situation.all.order('created_at DESC')
   end
 
   def new
