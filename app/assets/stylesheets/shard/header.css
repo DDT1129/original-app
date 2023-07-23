@@ -34,6 +34,7 @@
 
 .lists-right{
   display:flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
   list-style: none;
   width: 100vw;
