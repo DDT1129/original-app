@@ -1,17 +1,19 @@
 .main {
   background: #9be8e0;
-  width: 100vw;
+  max-width: 100%;
+  height: auto;
 }
 
 .title-contents {
-  width: 100vw;
+  max-width: 100%;
+  height: auto;
   background-image: image-url('23337252_s.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   padding: 5vh 15vw;
   color: #fff;
@@ -28,16 +30,23 @@
 }
 
 .menu{
-  padding: 23vh 23vw 5vh 15vw;
-  height: 50vh;
-}
-
-.menu-lists{
+  max-width: 100%;
+  height: auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 
+.menu-lists{
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .kaeru-wrap-b{
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 77px;
   list-style:none;
   font-size: 20px;
   background: #9be8e0;
@@ -81,11 +90,9 @@
 }
 
 .family-members{
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  height: auto;
   text-align: center;
-  display: flex;
-  justify-content: center;
 }
 
 .family-display{
@@ -95,6 +102,7 @@
   align-items: center;
   list-style: none;
   padding: 30px 0;  
+  margin: 0;
 }
 
 .display-list{

@@ -1,9 +1,9 @@
 .top-page-footer{
-  width: 100vw;
-  height: 15vh;
+  max-width: 100%;
+  height: auto;
   background:#1a5612;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 15px;
+  
 }
 
 .footer-page-contents{
@@ -21,13 +21,6 @@
 .footer-link{
   color:#ffffff; 
   text-decoration: none;
-}
-
-.top-page-footer-second{
-  width: 100vw;
-  background:#1a5612;
-  margin: 0;
-  
 }
 
 .footer-page-icons{
