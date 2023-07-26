@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 2023_07_19_171121) do
   create_table "situations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.boolean "out", default: false, null: false
     t.string "purpose"
     t.integer "genre_id", null: false
     t.bigint "user_id", null: false
