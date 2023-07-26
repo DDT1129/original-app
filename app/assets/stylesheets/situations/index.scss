@@ -1,17 +1,19 @@
 .main {
   background: #9be8e0;
-  width: 100vw;
+  max-width: 100%;
+  height: auto;
 }
 
 .title-contents {
-  width: 100vw;
+  max-width: 100%;
+  height: auto;
   background-image: image-url('23337252_s.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   padding: 5vh 15vw;
   color: #fff;
@@ -28,21 +30,26 @@
 }
 
 .menu{
-  padding: 5vh 15vw;
-  height: 50vh;
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .menu-lists{
+  max-width: 100%;
   display: flex;
-  justify-content: space-around;
-
+  flex-wrap: wrap;
 }
 
 .kaeru-wrap-b{
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 77px;
   list-style:none;
   font-size: 20px;
   background: #9be8e0;
-  
 }
 
 .kaeru-box-b{
@@ -58,6 +65,8 @@
   border: 15px solid #9BD002;
   border-radius: 50px;
   z-index: auto;
+  text-decoration: none;
+  border-bottom: 5px solid red;
 }
 
 .kaeru-box-b::before, 
@@ -72,10 +81,48 @@
    top: -65px;
    z-index: -10;
 }
-.kaeru-box-b::before { left: 50px;}
-.kaeru-box-b::after { right: 50px;}
+.kaeru-box-b::before { left: 100px;}
+.kaeru-box-b::after { right: 100px;}
 .kaeru-wrap-b{
   background-color: transparent;
   position: relative;
   z-index: 0;
+}
+
+.family-members{
+  max-width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.family-display{
+  background: #9be8e0;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 30px 0;  
+  margin: 0;
+}
+
+.display-list{
+  border: solid 1px #333333;
+  background: #cef9f5;
+  width: 80vw;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+.home-away-purpose{
+  font-weight: bolder;
+  font-size: larger;
+  width: 10vw;
+  border: #333333 solid 1px;
+  margin: auto;
+  background-color: #9BD002;
+  margin-bottom: 10px;
+}
+
+.datetime{
+  font-weight: bold;
 }

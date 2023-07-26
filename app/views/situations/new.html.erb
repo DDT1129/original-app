@@ -1,0 +1,32 @@
+<%= render "shared/second_header" %>
+
+<div class="contents_row">
+  <div class="container">
+  <%= render 'shared/error_messages', model: @situation %>
+    <h2 class="container_title">外出・帰宅のどちらかを選択してください</h2>
+    <%= form_with(model: @situation, local: true) do |f| %>
+
+      <div class="field">
+        <div class='form-text-wrap'>
+          <label class="form-text">外出・帰宅</label>
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"situation-select-box", id:"situation-status", autofocus: true}) %>
+      </div>
+
+      <div class="field">
+        <div class='form-text-wrap'>
+          <label class="form-text">目的</label>
+          <span class="indispensable">任意</span>
+        </div>
+        <%= f.text_field :purpose, class:"input-default" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "送信", class:"actions-button" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<%= render "shared/footer" %>

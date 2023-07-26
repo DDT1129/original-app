@@ -19,25 +19,47 @@
   <div class='menu'>
     <ul class='menu-lists'>
       <li class="kaeru-wrap-b">
-        <h3 class="kaeru-box-b">
-          外出<br>
-          帰宅
-        </h3>
+        <%= link_to "外出　/　帰宅", new_situation_path, class:"kaeru-box-b" %>
       </li>
       <li class="kaeru-wrap-b">
-        <h3 class="kaeru-box-b">
-          日記
-        </h3>
+       <%= link_to "　チャット　", "#", class:"kaeru-box-b" %>
       </li>
       <li class="kaeru-wrap-b">
-        <h3 class="kaeru-box-b">
-          メモ
-        </h3>
+        <%= link_to "　　メモ　　", "#", class:"kaeru-box-b" %>
       </li>
     </ul>
   </div>
   <%# アプリ機能一覧 %>
 
+  <%# 外出・帰宅の一覧を表示 %>
+  <% if user_signed_in? %>
+  <h1 class="family-members">Family Members</h1>
+  <ul class='family-display'>
+    <% @situations.each do |s| %>
+      <li class='display-list'>
+      <h3 class="family-name">
+        <%= s.user.nickname %>
+      </h3>
+      <div class="home-away-purpose">
+        <%= s.genre.name %><%= "(" + s.purpose + ")" %>
+      </div>
 
+      <div class="datetime">
+        <% if (@now - s.created_at) <= 60 * 60 %>
+          <%=((@now - s.created_at) / 60).to_i.to_s + "分前" %>
+        <% elsif (@now - s.created_at) <= 60 * 60 * 24 %>
+          <%=((@now - s.created_at) / 3600).to_i.to_s + "時間前" %>
+        <% elsif (@today - s.created_at.to_date) <= 30 %>
+          <%= (@today - s.created_at.to_date).to_i.to_s + "日前" %>
+        <% else %>
+          <%= s.created_at.strftime('%Y-%m-%d') %> 
+        <% end %>  
+     
+        <%= s.created_at.strftime('　　%m月%d日%H時%M分(%a)' ) %> </div>
+      </li>
+    <% end %>
+  </ul>
+  <% end %>
+  <%# 外出・帰宅の一覧を表示 %>
 </div>
 <%= render "shared/footer" %>

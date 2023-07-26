@@ -1,10 +1,11 @@
 .contents_row{
-  width: 100vw;
-  height: 100vh;
+  max-width: 100%;
+  height: auto;
+  display: flex; 
+  flex-wrap: wrap;
   background: #FFFFFF;
-  display: flex;
   justify-content: center;
-  
+  padding-bottom: 30px;
 }
 
 .container_title{
