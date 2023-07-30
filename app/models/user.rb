@@ -10,6 +10,6 @@ class User < ApplicationRecord
   validates_format_of :password, allow_blank: true, with: PASSWORD_REGEX, message: '英数字の両方を含めて半角で入力してください'
 
   has_many :situations, dependent: :destroy
-  has_many :family_accounts
+  has_one :family_account
   # 親テーブルのレコードを削除した際、同時に関連する子テーブルのレコードも削除させるため
 end

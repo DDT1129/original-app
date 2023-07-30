@@ -9,4 +9,6 @@ Rails.application.routes.draw do
 
   root to: "situations#index"
   resources :situations
+
+  resources :family_accounts,  only:[:new, :create]
 end

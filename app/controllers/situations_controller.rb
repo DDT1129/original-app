@@ -1,6 +1,10 @@
 class SituationsController < ApplicationController
 
   def index
+    if current_user
+      @family_account = FamilyAccount.find_by(user_id: current_user.id)
+    end
+    
     @today = Date.today #今日の日付を取得
     @now = Time.now     #現在時刻を取得
     

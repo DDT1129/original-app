@@ -30,36 +30,46 @@
     </ul>
   </div>
   <%# アプリ機能一覧 %>
-
-  <%# 外出・帰宅の一覧を表示 %>
+  
   <% if user_signed_in? %>
-  <h1 class="family-members">Family Members</h1>
-  <ul class='family-display'>
-    <% @situations.each do |s| %>
-      <li class='display-list'>
-      <h3 class="family-name">
-        <%= s.user.nickname %>
-      </h3>
-      <div class="home-away-purpose">
-        <%= s.genre.name %><%= "(" + s.purpose + ")" %>
-      </div>
-
-      <div class="datetime">
-        <% if (@now - s.created_at) <= 60 * 60 %>
-          <%=((@now - s.created_at) / 60).to_i.to_s + "分前" %>
-        <% elsif (@now - s.created_at) <= 60 * 60 * 24 %>
-          <%=((@now - s.created_at) / 3600).to_i.to_s + "時間前" %>
-        <% elsif (@today - s.created_at.to_date) <= 30 %>
-          <%= (@today - s.created_at.to_date).to_i.to_s + "日前" %>
-        <% else %>
-          <%= s.created_at.strftime('%Y-%m-%d') %> 
-        <% end %>  
-     
-        <%= s.created_at.strftime('　　%m月%d日%H時%M分(%a)' ) %> </div>
-      </li>
-    <% end %>
+  <ul class='family-account-contents'>
+    <li><%= link_to '家族アカウント作成', new_family_account_path, class: "family-account-new" %></li>
+    <li><%= link_to 'アカウントに入る', "#", class: "family-account-login" %></li>
   </ul>
   <% end %>
+
   <%# 外出・帰宅の一覧を表示 %>
+  <% if user_signed_in? && @family_account && @family_account.user_id == current_user.id %>
+    <h1 class="family-members">Family Members</h1>
+    <ul class='family-display'>
+      <% @family_account.user.situations.each do |s| %>
+        <li class='display-list'>
+          <h3 class="family-name">
+            <%= s.user.nickname %>
+          </h3>
+          <div class="home-away-purpose">
+            <%= s.genre.name %><%= "(" + s.purpose + ")" %>
+          </div>
+
+          <div class="datetime">
+            <% if (@now - s.created_at) <= 60 * 60 %>
+              <%=((@now - s.created_at) / 60).to_i.to_s + "分前" %>
+            <% elsif (@now - s.created_at) <= 60 * 60 * 24 %>
+              <%=((@now - s.created_at) / 3600).to_i.to_s + "時間前" %>
+            <% elsif (@today - s.created_at.to_date) <= 30 %>
+              <%= (@today - s.created_at.to_date).to_i.to_s + "日前" %>
+            <% else %>
+              <%= s.created_at.strftime('%Y-%m-%d') %> 
+            <% end %>  
+     
+            <%= s.created_at.strftime('　　%m月%d日%H時%M分(%a)' ) %> </div>
+        </li>
+      <% end %>
+    </ul>
+  <% else %>
+    <h3 class="family-accounts-need">ユーザー登録後、家族アカウントを作成、またはアカウントに入ることで外出・帰宅したことを表示することで家族と共有することができます。</h1>
+  <% end %>
+  <%# 外出・帰宅の一覧を表示 %>
+
 </div>
 <%= render "shared/footer" %>

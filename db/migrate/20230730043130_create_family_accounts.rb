@@ -4,7 +4,7 @@ class CreateFamilyAccounts < ActiveRecord::Migration[6.0]
 
       t.timestamps
 
-      t.string :family_code,         null: false  
+      t.string :family_code,          null: false  
       t.references :user,             null: false , foreign_key: true
     end
 

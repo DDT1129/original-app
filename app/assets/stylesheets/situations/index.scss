@@ -126,3 +126,33 @@
 .datetime{
   font-weight: bold;
 }
+
+.family-account-contents{
+  max-width: 100%;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  width: 100vw;
+  margin: auto;
+  padding: 0;
+}
+
+.family-account-new{
+  text-decoration: none;
+  color:#64a19b;
+  font-size: 30px;
+  border: solid #ffffff;
+  background: #ffffff;
+  border-radius: 10px;
+  margin-right: 60px;
+}
+
+.family-account-login{
+  text-decoration: none;
+  color:#64a19b;
+  font-size: 30px;
+  border: solid #ffffff;
+  background: #ffffff;
+  border-radius: 10px;
+}
