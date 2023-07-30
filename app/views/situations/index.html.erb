@@ -31,18 +31,18 @@
   </div>
   <%# アプリ機能一覧 %>
   
-  <% if user_signed_in? %>
-  <ul class='family-account-contents'>
-    <li><%= link_to '家族アカウント作成', new_family_account_path, class: "family-account-new" %></li>
-    <li><%= link_to 'アカウントに入る', "#", class: "family-account-login" %></li>
-  </ul>
-  <% end %>
+  <%# if user_signed_in? %>
+  <%# ul class='family-account-contents'>
+    <%# li><%= link_to '家族アカウント作成', new_family_account_path, class: "family-account-new" %></li>
+    <%# li><%= link_to 'アカウントに入る', "#", class: "family-account-login" %></li>
+  <%# /ul>
+  <%# end %>
 
   <%# 外出・帰宅の一覧を表示 %>
-  <% if user_signed_in? && @family_account && @family_account.user_id == current_user.id %>
+  <% if user_signed_in? %>
     <h1 class="family-members">Family Members</h1>
     <ul class='family-display'>
-      <% @family_account.user.situations.each do |s| %>
+      <% @situations.each do |s| %>
         <li class='display-list'>
           <h3 class="family-name">
             <%= s.user.nickname %>
@@ -66,8 +66,8 @@
         </li>
       <% end %>
     </ul>
-  <% else %>
-    <h3 class="family-accounts-need">ユーザー登録後、家族アカウントを作成して同じアカウントに入ることで外出・帰宅情報を家族と共有することができます。</h1>
+  <%# else %>
+    <%#h3 class="family-accounts-need">ユーザー登録後、家族アカウントを作成して同じアカウントに入ることで外出・帰宅情報を家族と共有することができます。</h3 %>
   <% end %>
   <%# 外出・帰宅の一覧を表示 %>
 
