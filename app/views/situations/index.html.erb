@@ -28,7 +28,7 @@
   <%# end %>
 
   <%# 外出・帰宅の一覧を表示 %>
-  <% if user_signed_in? %>
+  <% if user_signed_in? && @family_account && @family_account.user_id == current_user.id %>
     <h1 class="family-members">Family Members</h1>
     <ul class='family-display'>
       <% @situations.each do |s| %>

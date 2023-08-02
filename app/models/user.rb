@@ -5,9 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :nickname, presence: true
-
-  PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze
-  validates_format_of :password, allow_blank: true, with: PASSWORD_REGEX, message: '英数字の両方を含めて半角で入力してください'
+  validates :code,     presence: true
+  #PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze
+  #validates_format_of :password, allow_blank: true, with: PASSWORD_REGEX, message: '英数字の両方を含めて半角で入力してください'
 
   has_many :situations, dependent: :destroy
   has_one :family_account

@@ -38,7 +38,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  # protected
+  protected
+  #ユーザー登録後に家族アカウント作成ページへ遷移する
+  def after_sign_up_path_for(resources)
+    new_family_account_path
+  end
 
   # If you have extra params to permit, append them to the sanitizer.
   # def configure_sign_up_params

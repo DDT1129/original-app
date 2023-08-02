@@ -8,6 +8,7 @@ class CreateFamilyAccounts < ActiveRecord::Migration[6.0]
       t.references :user,             null: false , foreign_key: true
     end
 
-    add_index :family_accounts, :family_code,       unique: true
+    #家族が同じアカウントに入るためにため一意性を除去
+    add_index :family_accounts, :family_code,       unique: false
   end
 end
