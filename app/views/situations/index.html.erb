@@ -47,22 +47,20 @@
           <h3 class="family-name">
             <%= s.user.nickname %>
           </h3>
-          <div class="home-away-purpose">
-            <%= s.genre.name %><%= "(" + s.purpose + ")" %>
-          </div>
-
+          
           <div class="datetime">
             <% if (@now - s.created_at) <= 60 * 60 %>
-              <%=((@now - s.created_at) / 60).to_i.to_s + "分前" %>
+              <div class="time-font-style"><%=((@now - s.created_at) / 60).to_i.to_s + "分前に" %><%= s.genre.name %><%= "(" + s.purpose + ")" %></div>
             <% elsif (@now - s.created_at) <= 60 * 60 * 24 %>
-              <%=((@now - s.created_at) / 3600).to_i.to_s + "時間前" %>
+              <div class="time-font-style"><%=((@now - s.created_at) / 3600).to_i.to_s + "時間前に" %></div>
             <% elsif (@today - s.created_at.to_date) <= 30 %>
-              <%= (@today - s.created_at.to_date).to_i.to_s + "日前" %>
+              <div class="time-font-style"><%= (@today - s.created_at.to_date).to_i.to_s + "日前に" %></div>
             <% else %>
-              <%= s.created_at.strftime('%Y-%m-%d') %> 
-            <% end %>  
-     
-            <%= s.created_at.strftime('　　%m月%d日%H時%M分(%a)' ) %> </div>
+              <div class="time-font-style"><%= s.created_at.strftime('%Y-%m-%dに') %> </div>
+            <% end %>       
+            <%= s.created_at.strftime('　　%m月%d日%H時%M分(%a)' ) %> 
+          
+          </div>
         </li>
       <% end %>
     </ul>
