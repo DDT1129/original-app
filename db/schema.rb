@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2023_07_30_043130) do
     t.string "purpose"
     t.integer "genre_id", null: false
     t.bigint "user_id", null: false
+    t.string "family_code", null: false
     t.index ["user_id"], name: "index_situations_on_user_id"
   end
 

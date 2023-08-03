@@ -8,6 +8,7 @@ class CreateSituations < ActiveRecord::Migration[6.0]
       t.string  :purpose
       t.integer :genre_id,            null: false
       t.references :user,             null: false , foreign_key: true
+      t.string :family_code,          null: false
     end
   end
 end
