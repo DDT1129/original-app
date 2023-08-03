@@ -11,7 +11,7 @@ class SituationsController < ApplicationController
     # []を作って、userモデルからデータを持ってくる（登録ユーザーを表示するため）、最新の表示だけに設定   
     @situations = [] 
     # Whereで同じ家族コードのみ表示するようにフィルターをかける
-    if current_user != nil #ユーザーが登録する前にエラーになるのを防ぐため
+    if current_user != nil && @family_account #ユーザーが登録する前にエラーになるのを防ぐため && ユーザー登録後に家族アカウントでコード入力せずトップページに戻ってもエラーを回避
       User.where(code: @family_account.family_code).each do |user| 
         latest_situation = user.situations.order(created_at: :desc).first
         @situations << latest_situation if latest_situation
