@@ -53,6 +53,10 @@
             <%= s.created_at.strftime('　　%m月%d日%H時%M分(%a)' ) %> 
           
           </div>
+
+          <% if current_user.id == s.user_id %>
+            <%= link_to "削 除", situation_path(s.id), method: :delete, class:"check-in-destroy" %>
+          <% end %>
         </li>
       <% end %>
     </ul>

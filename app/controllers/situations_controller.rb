@@ -32,6 +32,12 @@ class SituationsController < ApplicationController
     end
   end
 
+  def destroy
+    @situation = Situation.find(params[:id])
+    @situation.destroy
+    redirect_to root_path
+  end
+
   private
   def situation_params
     params.require(:situation).permit(:purpose, :genre_id, :user_id, :family_code).merge(user_id: current_user.id, family_code: current_user.code)
