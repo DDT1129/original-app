@@ -1,8 +1,11 @@
 <%= render "shared/header" %>
 
 <div class="main">
-
-  
+  <div class="sign-up-explanation">
+    <% unless user_signed_in? %>
+      <h1>初めての方は新規登録して下さい</h1>
+    <% end %>
+  </div>
     
   <%# アプリ機能一覧 %>  
   <div class='menu'>
