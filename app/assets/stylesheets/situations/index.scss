@@ -10,6 +10,17 @@
   text-align: center;
 }
 
+.new-family-account{
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: lighter;
+  color:#64a19b;
+  border: solid #ffffff;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
 .title-contents {
   max-width: 100%;
   height: auto;
@@ -41,16 +52,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-}
-
-.new-family-account{
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 30px;
-  color:#64a19b;
-  border: solid #ffffff;
-  background: #ffffff;
-  border-radius: 10px;
 }
 
 .menu-lists{
