@@ -1,7 +1,24 @@
 .main {
   background: #9be8e0;
   max-width: 100%;
-  height: auto;
+  height: 100%;
+  padding-top: 220px;
+}
+
+.sign-up-explanation{
+  color: #ffffff;
+  text-align: center;
+}
+
+.new-family-account{
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: lighter;
+  color:#64a19b;
+  border: solid #ffffff;
+  background: #ffffff;
+  border-radius: 10px;
 }
 
 .title-contents {
@@ -113,16 +130,68 @@
   margin-bottom: 15px;
 }
 
-.home-away-purpose{
+.datetime{
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.family-account-contents{
+  max-width: 100%;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  width: 100vw;
+  margin: auto;
+  padding: 0;
+}
+
+.family-account-new{
+  text-decoration: none;
+  color:#64a19b;
+  font-size: 30px;
+  border: solid #ffffff;
+  background: #ffffff;
+  border-radius: 10px;
+  margin-right: 60px;
+}
+
+.family-account-login{
+  text-decoration: none;
+  color:#64a19b;
+  font-size: 30px;
+  border: solid #ffffff;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.family-accounts-need{
+  margin: 0 auto;
+  text-align: center;
+}
+
+.time-font-style{
   font-weight: bolder;
+  margin: auto;
+  background-color: #9BD002;
   font-size: larger;
-  width: 10vw;
+  width: 15vw;
+
   border: #333333 solid 1px;
   margin: auto;
   background-color: #9BD002;
   margin-bottom: 10px;
+  border-radius: 15px;
 }
 
-.datetime{
+.check-in-destroy{
+  text-decoration-line: underline;
+  margin-top: 15px;
+  color: #ff4c4c;
   font-weight: bold;
+  border-radius: 5px;
 }
+
+
+  
+ 

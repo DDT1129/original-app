@@ -9,10 +9,18 @@
       
       <div class="field">
         <div class='form-text-wrap'>
-          <label class="form-text">ニックネーム</label>
+          <label class="form-text">お名前</label>
           <span class="indispensable">必須</span>
         </div>
         <%= f.text_field :nickname, class:"input-default", id:"nickname", placeholder:"(例) おじいちゃん", maxlength:"20", autofocus: true %>
+      </div>
+
+      <div class="field">
+        <div class='form-text-wrap'>
+          <label class="form-text">家族コード</label>
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_field :code, class:"input-default", id:"code", placeholder:"6桁以上の数字(※ 家族アカウント作成時に使います)", minilength: "6" %>
       </div>
 
       <div class="field">

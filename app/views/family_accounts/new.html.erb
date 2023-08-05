@@ -1,0 +1,25 @@
+<%= render "shared/second_header" %>
+
+<%= render 'shared/error_messages', model: @family_account %>
+
+<div class="contents_row">
+  <div class="container">
+    <h2 class="container_title">家族コードを入力して下さい</h2>
+    <%= form_with model: @family_account, class: 'new_user', local: true do |f| %>
+      
+      <div class="field">
+        <div class='form-text-wrap'>
+          <label class="form-text">コード</label>
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_field :family_code, class:"input-default", placeholder:" 6桁以上の数字 (※ ユーザー登録時に入力したコード)", autofocus: true %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "登録", class:"actions-button" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<%= render "shared/footer" %>
