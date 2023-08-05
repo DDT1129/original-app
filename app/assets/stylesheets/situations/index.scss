@@ -113,21 +113,30 @@
 }
 
 .family-display{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   background: #9be8e0;
   text-align: center;
-  justify-content: center;
-  align-items: center;
   list-style: none;
-  padding: 30px 0;  
-  margin: 0;
+  padding: 100px 0;  
+  justify-content: space-around;
+  margin: 0 auto;
 }
 
 .display-list{
+  width: calc((100% - 400px) / 2);
   border: solid 1px #333333;
   background: #cef9f5;
-  width: 80vw;
-  margin: auto;
-  margin-bottom: 15px;
+  margin: 0 auto 50px;
+}
+
+.family-name{
+  font-size: 30px;
+}
+
+.frog-jamp-image{
+  max-width: 15vw;
 }
 
 .datetime{
@@ -184,12 +193,18 @@
   border-radius: 15px;
 }
 
+.delet-botton{
+  text-align: end;
+  padding-right: 25px;
+}
+
 .check-in-destroy{
   text-decoration-line: underline;
   margin-top: 15px;
   color: #ff4c4c;
   font-weight: bold;
   border-radius: 5px;
+  font-weight: bold;
 }
 
 

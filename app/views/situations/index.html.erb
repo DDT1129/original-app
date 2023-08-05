@@ -40,6 +40,15 @@
     <ul class='family-display'>
       <% @situations.each do |s| %>
         <li class='display-list'>
+          <div class="frog-jamp">
+            <% if s.genre_id == 2 %>
+              <%= image_tag("frog-jamp.png", class:"frog-jamp-image") %>
+            <% end %>
+            <% if s.genre_id == 3 %>
+              <%= image_tag("frog-sleep.png", class:"frog-jamp-image") %>
+            <% end %>
+          </div>
+
           <h3 class="family-name">
             <%= s.user.nickname %>
           </h3>
@@ -58,9 +67,11 @@
           
           </div>
 
+          <div class="delet-botton">
           <% if current_user.id == s.user_id %>
             <%= link_to "削 除", situation_path(s.id), method: :delete, class:"check-in-destroy" %>
           <% end %>
+          </div>
         </li>
       <% end %>
     </ul>
