@@ -12,9 +12,8 @@ Rails.application.routes.draw do
     get '/users', to: 'devise/registrations#new'
   end
     
-
   root to: "situations#index"
+  resources :memos
   resources :situations
-
   resources :family_accounts
 end
