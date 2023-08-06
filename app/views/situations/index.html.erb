@@ -7,7 +7,7 @@
     <% end %>
     
     <% unless user_signed_in? && @family_account && @family_account.user_id == current_user.id %>
-      <h1>外出・帰宅を通知するには、新規登録後に<span><%= link_to " 家族アカウントを登録 ", new_family_account_path, class:"new-family-account" %></span>する必要があります</h1>
+      <h1>＜外出・帰宅＞＜メモ＞機能を利用するためには、<br>新規登録後に<span><%= link_to " 家族アカウントを登録 ", new_family_account_path, class:"new-family-account" %></span>する必要があります</h1>
     <% end %>
   </div>
     

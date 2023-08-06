@@ -1,4 +1,6 @@
 class MemosController < ApplicationController
+  before_action :authenticate_user!, only: [:index]
+
   def index
     if current_user
       @family_account = FamilyAccount.find_by(user_id: current_user.id)
