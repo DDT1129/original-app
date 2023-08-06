@@ -1,0 +1,41 @@
+<%= render "shared/header" %>
+
+<div class="main">
+
+  <%# memoの新規作成ボタン、一覧を表示 %>
+  <div class="memo-lists">
+  <% if user_signed_in? && @family_account && @family_account.user_id == current_user.id %>
+  <h1 class="family-members">メモ一覧</h1>
+  
+  <%# memo作成ボタン %>
+  <div class="new-memo">
+  <%= link_to '新規メモ作成', new_memo_path, class: "new-memo-link" %>
+  </div>
+  <%# memo作成ボタン %>
+
+  <%# 一覧 %>
+    <ul class='family-display'>
+      <% @memos.each do |m| %>
+        <li class='display-list'>
+          <h3 class="family-name">
+            <%= m.user.nickname %>
+          </h3>
+
+          <div class="memo">
+          <%= m.text %>
+          </div>
+        
+          <div class="delet-botton">
+          <% if current_user.id == m.user_id %>
+            <%= link_to "削 除", memo_path(m.id), method: :delete, class:"check-in-destroy" %>
+          <% end %>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+  </div>
+  <%# memoの新規作成ボタン、一覧を表示 %>
+
+</div>
+<%= render "shared/footer" %>

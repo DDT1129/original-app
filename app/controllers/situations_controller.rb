@@ -12,9 +12,9 @@ class SituationsController < ApplicationController
     @situations = [] 
     # Whereで同じ家族コードのみ表示するようにフィルターをかける
     if current_user != nil && @family_account #ユーザーが登録する前にエラーになるのを防ぐため && ユーザー登録後に家族アカウントでコード入力せずトップページに戻ってもエラーを回避
-      User.where(code: @family_account.family_code).each do |user| 
-        latest_situation = user.situations.order(created_at: :desc).first
-        @situations << latest_situation if latest_situation
+      User.where(code: @family_account.family_code).each do |user| #ユーザーモデルのcodeにfamily_accountのfamily_codeと同じものが該当するかwhereメソッドでフィルタリングする
+        latest_situation = user.situations.order(created_at: :desc).first #上記フィルターに該当するデータをさらに降順で最新のもののみ、変数に代入
+        @situations << latest_situation if latest_situation #上記で設定した変数（最新の投稿）が取得された場合、また配列に追加する
       end    
     end
   end

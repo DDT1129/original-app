@@ -1,0 +1,24 @@
+<%= render "shared/second_header" %>
+
+<div class="contents_row">
+  <div class="container">
+  <%= render 'shared/error_messages', model: @memo %>
+    <h2 class="container_title">メモ内容を入力してください</h2>
+    <%= form_with(model: @memo, local: true) do |f| %>
+
+      <div class="field">
+        <div class='form-text-wrap'>
+          <label class="form-text">メモ</label>
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_field :text, class:"input-default" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "作成", class:"actions-button" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<%= render "shared/footer" %>

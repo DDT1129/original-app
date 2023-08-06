@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2023_08_06_134854) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "text", null: false
+    t.string "family_code", null: false
     t.bigint "user_id", null: false
     t.index ["user_id"], name: "index_memos_on_user_id"
   end

@@ -1,0 +1,14 @@
+.new-memo{
+  max-width: 100%;
+  text-align: center;
+}
+
+.new-memo-link{
+  max-width: 100%;
+  text-decoration: none;
+  color:#64a19b;
+  font-size: 30px;
+  border: solid #ffffff;
+  background: #ffffff;
+  border-radius: 10px;
+}
