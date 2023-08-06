@@ -13,7 +13,11 @@ Rails.application.routes.draw do
   end
     
   root to: "situations#index"
-  resources :memos
+  resources :memos do
+    put 'completed', on: :member
+    put 'incompleted', on: :member
+  end
+  
   resources :situations
   resources :family_accounts
 end

@@ -32,6 +32,19 @@ class MemosController < ApplicationController
     memo.destroy
     redirect_to '/memos'
   end
+
+  def completed
+    @memo = Memo.find(params[:id])
+    @memo.update(completed: true)
+    redirect_to '/memos'
+  end
+
+  def incompleted
+    @memo = Memo.find(params[:id])
+    @memo.update(completed: false)
+    redirect_to '/memos'
+  end
+
       
   private
   
