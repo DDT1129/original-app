@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_07_30_043130) do
+ActiveRecord::Schema.define(version: 2023_08_06_134854) do
 
   create_table "family_accounts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -24,6 +24,14 @@ ActiveRecord::Schema.define(version: 2023_07_30_043130) do
   create_table "genres", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "memos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "text", null: false
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_memos_on_user_id"
   end
 
   create_table "situations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -51,5 +59,6 @@ ActiveRecord::Schema.define(version: 2023_07_30_043130) do
   end
 
   add_foreign_key "family_accounts", "users"
+  add_foreign_key "memos", "users"
   add_foreign_key "situations", "users"
 end
