@@ -33,8 +33,8 @@ class SituationsController < ApplicationController
   end
 
   def destroy
-    @situation = Situation.find(params[:id])
-    @situation.destroy
+    situation = Situation.find(params[:id])
+    situation.destroy
     redirect_to root_path
   end
 
