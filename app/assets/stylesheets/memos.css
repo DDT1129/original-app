@@ -1,6 +1,7 @@
 .new-memo{
   max-width: 100%;
   text-align: center;
+  margin-bottom: 70px;
 }
 
 .new-memo-link{
@@ -12,3 +13,49 @@
   background: #ffffff;
   border-radius: 10px;
 }
+
+.memo-display{
+  padding: 20px 50px;
+  margin: 0 auto;
+}
+
+.memo-list{
+  max-width: 100%;
+  background: #cef9f5;
+  margin: 0 auto 50px;
+  border-radius: 10px;
+}
+
+li{
+  list-style: none;
+}
+
+.memo-list-in{
+  display: flex;
+  max-width: 100%;
+  padding: 10px 0;
+}
+
+.check-botton{
+  padding-left: 10px;
+}
+
+.memo-name{
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.memo{
+  background-color: #ffffff;
+  border: solid 1px #333333;
+  margin: 0 20px;
+  padding: 0 10px;
+  max-width: 65vw;
+  font-size: 20px;
+}
+
+.delet-botton{
+  font-size: 20px;
+}
+
