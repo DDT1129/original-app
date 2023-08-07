@@ -1,13 +1,6 @@
 <%= render "shared/second_header" %>
 
-<%# createアクションで失敗時にエラー表示できなかったため、下記flashに切り替え　
-<%= render 'shared/error_messages', model: @family_account %>
-
-<% if flash[:alert].present? %>
-<div class='login-flash-message'>
-    <%= flash[:alert] %>
-</div>
-<% end %>
+<%#= render 'shared/error_messages', model: @family_account %>
 
 <div class="contents_row">
   <div class="container">
