@@ -15,8 +15,9 @@
   <%# memo作成ボタン %>
 
   <div class="new-memo-return">
-    <%= link_to "もどる", root_path, class:"memo-return-botton" %>
+    <%= link_to "< もどる", root_path, class:"memo-return-botton" %>
   </div>
+
   <%# 一覧 %>
     <ul class='memo-display'>
       <% @memos.each do |m| %>

@@ -34,7 +34,7 @@ class MemosController < ApplicationController
   end
 
   def update
-    if @memo.update(memo_params)
+    if @memo.update(edit_memo_params)
       redirect_to memos_path
     else
       render :edit
@@ -60,6 +60,11 @@ class MemosController < ApplicationController
   
   def memo_params
     params.require(:memo).permit(:text, :user_id, :family_code).merge(user_id: current_user.id, family_code: current_user.code)
+  end
+
+  #家族間でメモを共有し、誰でも削除、完了チェック、編集ができるが編集した際に当初の作成者が更新されないためのもの。「text」のみ更新されるように設定
+  def edit_memo_params
+    params.require(:memo).permit(:text)
   end
 
   def set_memo
