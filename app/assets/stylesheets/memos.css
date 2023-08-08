@@ -54,6 +54,7 @@ li{
   padding: 0 10px;
   max-width: 65vw;
   font-size: 20px;
+  overflow-wrap: break-word;
 }
 
 .memo-check-no{

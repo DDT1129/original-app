@@ -1,8 +1,8 @@
 <%= render "shared/second_header" %>
+<%= render 'shared/error_messages', model: @memo %>
 
 <div class="contents_row">
   <div class="container">
-  <%= render 'shared/error_messages', model: @memo %>
     <h2 class="container_title">メモ内容を編集してください</h2>
     <%= form_with(model: @memo, local: true) do |f| %>
 
