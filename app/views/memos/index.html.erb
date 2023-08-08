@@ -1,0 +1,66 @@
+<%= render "shared/header" %>
+
+
+<div class="main">
+
+  <%# memoの新規作成ボタン、一覧を表示 %>
+  <div class="memo-lists">
+  <% unless  @family_account && @family_account.user_id == current_user.id %>
+    <div class="memo-ex">
+    ＜メモ＞を利用するためには、<span><%= link_to " 家族コードを入力 ", new_family_account_path, class:"new-family-account" %></span>して登録する必要があります
+    </div>
+  <% end %>  
+
+  <% if user_signed_in? && @family_account && @family_account.user_id == current_user.id %>
+  <h1 class="family-members">メモ一覧</h1>
+  
+  <%# memo作成ボタン %>
+  <div class="new-memo">
+  <%= link_to '新規メモ作成', new_memo_path, class: "new-memo-link" %>
+  </div>
+  <%# memo作成ボタン %>
+
+  <div class="new-memo-return">
+    <%= link_to "< もどる", root_path, class:"memo-return-botton" %>
+  </div>
+
+  <%# 一覧 %>
+    <ul class='memo-display'>
+      <% @memos.each do |m| %>
+        <div class="memo-list">
+          <li class='memo-list-in'>
+            <div class="check-botton">
+            <%= check_box_tag"completed[]", m.id, m.completed %>
+            </div>
+
+            <div class="memo-name">
+              <%= m.user.nickname %>
+            </div>
+
+            <div class="memo">
+            <%= m.text %>
+            </div>
+
+            <div class="delet-botton">
+            <% if m.completed? %>
+              <%= link_to "未完了", incompleted_memo_path(m), method: :put, class:"memo-check-no" %>
+            <% else %>
+              <%= link_to "完了", completed_memo_path(m), method: :put, class:"memo-check-yes" %>
+            <% end %>
+
+            <%= link_to "編集", edit_memo_path(m.id), class:"memo-edit" %>
+            
+            <%# if current_user.id == m.user_id %>
+              <%= link_to "削除", memo_path(m.id), method: :delete, class:"check-in-destroy" %>
+            <%# end %>
+            </div>
+          </li>
+        </div>
+      <% end %>
+    </ul>
+  <% end %>
+  </div>
+  <%# memoの新規作成ボタン、一覧を表示 %>
+
+</div>
+<%= render "shared/footer" %>

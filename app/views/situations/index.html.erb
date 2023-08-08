@@ -1,15 +1,22 @@
 <%= render "shared/header" %>
 
 <div class="main">
-  <div class="sign-up-explanation">
-    <% unless user_signed_in? %>
-      <h1>初めての方は新規登録して下さい</h1>
-    <% end %>
-    
-    <% unless user_signed_in? && @family_account && @family_account.user_id == current_user.id %>
-      <h1>外出・帰宅を通知するには、新規登録後に<span><%= link_to " 家族アカウントを登録 ", new_family_account_path, class:"new-family-account" %></span>する必要があります</h1>
-    <% end %>
+  <% unless user_signed_in? %>
+    <div class="sign-ex1">初めての方は新規登録して下さい</div>
+  <% end %>
+
+  <div class="memo-lists">
+    <% unless  @family_account && @family_account.user_id == current_user.id %>
+      <div class="sign-ex2">利用するためには、<span><%= link_to " 家族コードを入力 ", new_family_account_path, class:"new-family-account" %></span>して登録する必要があります</div>
+    <% end %> 
   </div>
+  
+    <%# unless @family_account && @family_account.user_id == current_user.id %>
+      <%#div class="sign-ex2">
+      ＜外出・帰宅＞＜メモ＞機能を利用するためには、<br>新規登録後に<span><%= link_to " 家族アカウントを登録 ", new_family_account_path, class:"new-family-account" %><%#/span>する必要があります
+      <%#div>
+    <%# end %>
+  <%#/div>
     
   <%# アプリ機能一覧 %>  
   <div class='menu'>
@@ -18,10 +25,7 @@
         <%= link_to "外出　/　帰宅", new_situation_path, class:"kaeru-box-b" %>
       </li>
       <li class="kaeru-wrap-b">
-       <%= link_to "　チャット　", "#", class:"kaeru-box-b" %>
-      </li>
-      <li class="kaeru-wrap-b">
-        <%= link_to "　　メモ　　", "#", class:"kaeru-box-b" %>
+        <%= link_to "　　メモ　　", memos_path, class:"kaeru-box-b" %>
       </li>
     </ul>
   </div>
@@ -40,12 +44,24 @@
     <ul class='family-display'>
       <% @situations.each do |s| %>
         <li class='display-list'>
-          <div class="frog-jamp">
+          <div class="situation-image">
             <% if s.genre_id == 2 %>
               <%= image_tag("frog-jamp.png", class:"frog-jamp-image") %>
+              <% if s.user.memos.present?  %>
+                <div class="memo-ari">
+                <%= link_to "メモがあります", memos_path,class:"memo-link" %> 
+                <%= image_tag("task_mark.png", class:"task-mark-image") %>
+                </div>
+              <% end %>
             <% end %>
             <% if s.genre_id == 3 %>
               <%= image_tag("frog-sleep.png", class:"frog-jamp-image") %>
+              <% if s.user.memos.present? %>
+                <div class="memo-ari">
+                <%= link_to "メモがあります", memos_path ,class:"memo-link" %> 
+                <%= image_tag("task_mark.png", class:"task-mark-image") %>
+                </div>
+              <% end %>
             <% end %>
           </div>
 
@@ -63,7 +79,7 @@
             <% else %>
               <div class="time-font-style"><%= s.created_at.strftime('%Y-%m-%dに') %><%= s.genre.name %><%= "(" + s.purpose + ")" %></div>
             <% end %>       
-            <%= s.created_at.strftime('　　%m月%d日%H時%M分(%a)' ) %> 
+            <%= s.created_at.strftime('%m月%d日%H時%M分(%a)' ) %> 
           
           </div>
 

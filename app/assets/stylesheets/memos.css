@@ -1,0 +1,107 @@
+.memo-ex{
+  font-size: 28px;
+  text-align: center;
+  padding-bottom: 250px;
+  color: #00863c;
+}
+
+.new-memo{
+  max-width: 100%;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.new-memo-link{
+  max-width: 100%;
+  text-decoration: none;
+  color:#64a19b;
+  font-size: 30px;
+  border: solid #ffffff;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.memo-display{
+  padding: 20px 50px;
+  margin: 0 auto;
+}
+
+.memo-list{
+  max-width: 100%;
+  background: #cef9f5;
+  margin: 0 auto 50px;
+  border-radius: 10px;
+}
+
+li{
+  list-style: none;
+}
+
+.memo-list-in{
+  display: flex;
+  max-width: 100%;
+  padding: 10px 0;
+}
+
+.check-botton{
+  padding-left: 10px;
+  text-decoration: none;
+}
+
+.memo-name{
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.memo{
+  background-color: #ffffff;
+  border: solid 1px #333333;
+  margin: 0 20px;
+  padding: 0 10px;
+  max-width: 65vw;
+  font-size: 20px;
+  overflow-wrap: break-word;
+}
+
+.memo-check-no{
+  text-decoration: none;
+  color: #333333;
+  margin-left: 15px;
+}
+
+.memo-check-yes{
+  text-decoration: none;
+  color: #333333;
+  margin-left: 15px;
+}
+
+.memo-edit{
+  text-decoration: none;
+  color: #333333;
+  margin-left: 15px;
+}
+
+.delet-botton{
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.check-in-destroy{
+  text-decoration: none;
+  margin-top: 15px;
+  color: #ff4c4c;
+  border-radius: 5px;
+  margin-left: 15px;
+}
+
+.memo-return-botton{
+  text-decoration: none;
+  font-size: 23px;
+  color: #00863c;
+  font-weight: bold;
+}
+
+.new-memo-return{
+  padding-left: 80px;
+}

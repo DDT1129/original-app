@@ -12,9 +12,12 @@ Rails.application.routes.draw do
     get '/users', to: 'devise/registrations#new'
   end
     
-
   root to: "situations#index"
+  resources :memos do
+    put 'completed', on: :member
+    put 'incompleted', on: :member
+  end
+  
   resources :situations
-
   resources :family_accounts
 end
