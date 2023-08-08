@@ -119,9 +119,9 @@
   background: #9be8e0;
   text-align: center;
   list-style: none;
-  padding: 100px 0;  
+  padding: 10px 0;  
   justify-content: space-around;
-  margin: 0 auto;
+  margin: 0 100px;
 }
 
 .display-list{
@@ -137,8 +137,33 @@
   margin: 0;
 }
 
+.situation-image{
+  position: relative;
+  height: 190px;
+}
+
 .frog-jamp-image{
   max-width: 15vw;
+}
+
+.task-mark-image{
+  max-width: 3vw;
+  position: absolute;
+  bottom: 40px;
+  right: 120px;
+}
+
+.memo-ari{
+  position: relative;
+}
+
+.memo-link{
+  position: absolute;
+  text-decoration: none;
+  color: red;
+  font-size: 18px;
+  bottom: 40px;
+  right: 10px;
 }
 
 .datetime{
