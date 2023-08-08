@@ -1,4 +1,5 @@
 class FamilyAccountsController < ApplicationController
+  before_action :check_family_account, only: [:new]
 
   # indexアクションは必要なかったが、createアクションの後にindexが呼ばれてエラーになることからviewも併せて作成しエラー回避
   def index
@@ -31,6 +32,17 @@ class FamilyAccountsController < ApplicationController
       return true
     else
       return false
+    end
+  end
+
+  #ユーザーが重複してアカウント作成しないように登録済みの場合はトップページに遷移させる
+  def check_family_account
+    if current_user
+      @family_account = FamilyAccount.find_by(user_id: current_user.id)
+    end
+    if  @family_account && @family_account.family_code == current_user.code
+      redirect_to root_path
+      return
     end
   end
 end
