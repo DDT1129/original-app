@@ -1,3 +1,10 @@
+.memo-ex{
+  font-size: 28px;
+  text-align: center;
+  padding-bottom: 250px;
+  color: #00863c;
+}
+
 .new-memo{
   max-width: 100%;
   text-align: center;
