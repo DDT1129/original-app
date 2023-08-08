@@ -38,6 +38,7 @@ li{
 
 .check-botton{
   padding-left: 10px;
+  text-decoration: none;
 }
 
 .memo-name{
@@ -55,7 +56,43 @@ li{
   font-size: 20px;
 }
 
-.delet-botton{
-  font-size: 20px;
+.memo-check-no{
+  text-decoration: none;
+  color: #333333;
+  margin-left: 15px;
 }
 
+.memo-check-yes{
+  text-decoration: none;
+  color: #333333;
+  margin-left: 15px;
+}
+
+.memo-edit{
+  text-decoration: none;
+  color: #333333;
+  margin-left: 15px;
+}
+
+.delet-botton{
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.check-in-destroy{
+  text-decoration: none;
+  margin-top: 15px;
+  color: #ff4c4c;
+  border-radius: 5px;
+  margin-left: 15px;
+}
+
+.memo-return-botton{
+  text-decoration: none;
+  font-size: 20px;
+  color: #64a19b;
+}
+
+.new-memo-return{
+  padding-left: 50px;
+}

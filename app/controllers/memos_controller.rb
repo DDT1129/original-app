@@ -1,5 +1,6 @@
 class MemosController < ApplicationController
   before_action :authenticate_user!, only: [:index]
+  before_action :set_memo, only: [:edit, :update, :destroy, :completed, :incompleted]
 
   def index
     if current_user
@@ -28,29 +29,40 @@ class MemosController < ApplicationController
       render :new
     end
   end
+
+  def edit
+  end
+
+  def update
+    if @memo.update(memo_params)
+      redirect_to memos_path
+    else
+      render :edit
+    end
+  end
     
   def destroy
-    memo = Memo.find(params[:id])
-    memo.destroy
-    redirect_to '/memos'
+    @memo.destroy
+    redirect_to '/memos'  
   end
 
   def completed
-    @memo = Memo.find(params[:id])
     @memo.update(completed: true)
     redirect_to '/memos'
   end
 
   def incompleted
-    @memo = Memo.find(params[:id])
     @memo.update(completed: false)
     redirect_to '/memos'
   end
-
       
   private
   
   def memo_params
     params.require(:memo).permit(:text, :user_id, :family_code).merge(user_id: current_user.id, family_code: current_user.code)
+  end
+
+  def set_memo
+    @memo = Memo.find(params[:id])
   end
 end
