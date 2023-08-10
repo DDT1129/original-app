@@ -23,14 +23,15 @@
   border-radius: 50px;
 }
 
-.header-icon{
-  width: 10vw;
-  margin-right: 10vw;
-  font-size: 40px;
+a.header-icon{
+  white-space: nowrap;
+  max-width: 20vw;
+  margin: auto 0;
+  padding-left: 15px;
+  font-size: 70px;
   color: #ffffff;
   text-decoration: none;
-  font-weight: bold;
-  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Lilita One', cursive;
 }
 
 .lists-right{
@@ -51,6 +52,7 @@
   background: #ffffff;
   border-radius: 10px;
   margin-right: 35px;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 .sign-up{
@@ -62,6 +64,7 @@
   border: solid #ffffff;
   background: #ffffff;
   border-radius: 10px;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 .user-nickname{
@@ -74,6 +77,7 @@
   background: #ffffff;
   border-radius: 10px;
   margin-right: 35px;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 .logout{
@@ -85,4 +89,5 @@
   border: solid #ffffff;
   background: #ffffff;
   border-radius: 10px;
+  font-family: 'Noto Sans JP', sans-serif;
 }

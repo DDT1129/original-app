@@ -15,15 +15,17 @@
   text-align: center;
   color: #00863c;
   padding-bottom: 20px;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 .sign-ex2{
   font-size: 28px;
   text-align: center;
   color: #00863c;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
-.new-family-account{
+a.new-family-account{
   text-decoration: none;
   color: #ffffff;
   font-size: 30px;
@@ -32,6 +34,7 @@
   border: solid #ffffff;
   background: #ffffff;
   border-radius: 10px;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 .title-contents {
@@ -82,8 +85,8 @@
   background: #9be8e0;
 }
 
-.kaeru-box-b{
-  font-family:inherit;
+a.kaeru-box-b{
+  font-family: 'Noto Sans JP', sans-serif;
   position: relative;
   margin: 5em auto 3em;
   padding: 15px 20px;
@@ -123,6 +126,8 @@
   max-width: 100%;
   height: auto;
   text-align: center;
+  font-family: 'Lilita One', cursive;
+  font-size: 70px;
 }
 
 .family-display{
@@ -145,9 +150,10 @@
   border-radius: 300px;
 }
 
-.family-name{
+h3.family-name{
   font-size: 30px;
   margin: 0;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 .situation-image{
@@ -170,18 +176,20 @@
   position: relative;
 }
 
-.memo-link{
+a.memo-link{
   position: absolute;
   text-decoration: none;
   color: red;
   font-size: 18px;
   bottom: 40px;
   right: 10px;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 .datetime{
   font-weight: bold;
   padding-bottom: 10px;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 .family-account-contents{
@@ -234,8 +242,10 @@
 }
 
 .delet-botton{
+  font-weight: bold;
   text-align: end;
   padding-right: 25px;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 
