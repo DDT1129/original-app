@@ -1,24 +1,54 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## usersテーブル
 
-Things you may want to cover:
+|Column              |Type            |Options                     |
+| ------------------ | -------------- | -------------------------- |
+|nickname            |string          |null: false                 |
+|code                |string          |null: false                 |
+|email               |string          |null: false, unique: true   |
+|encrypted_password  |string          |null: false                 |
 
-* Ruby version
+### Association
 
-* System dependencies
+- has_many :situations, dependent :destroy
+- has_many :memos, dependent :destroy
+- belongs_to :family_account, optional: true
 
-* Configuration
+## family_accountsテーブル
 
-* Database creation
+|Column         |Type        |Options                        |
+| ------------- | ---------- | ----------------------------- |
+|family_code    |string      |null: false, unique: false     |
+|user_id        |references  |null: false, foreign_key: true |
 
-* Database initialization
+### Association
 
-* How to run the test suite
+- has_many :users
 
-* Services (job queues, cache servers, search engines, etc.)
+## situationsテーブル
 
-* Deployment instructions
+|Column             |Type        |Options                          |
+| ----------------- | ---------- | ------------------------------- |
+|genre_id           |integer     |null: false                      |
+|purpose            |string      |                                 |
+|family_code        |string      |null: false                      |
+|user_id            |references  |null: false, foreign_key: true   |
 
-* ...
+### Association
+
+- belongs_to :genre
+- belongs_to :user
+
+## memosテーブル
+
+|Column          |Type        |Options                         |
+| -------------- | ---------- | ------------------------------ |
+|text            |string      |null: false                     |
+|family_code     |string      |null: false                     |
+|completed       |boolean     |default: false                  |
+|user_id         |references  |null: false, foreign_key: true  |
+
+### Association
+
+- belongs_to :user
