@@ -80,10 +80,10 @@ https://docs.google.com/spreadsheets/d/1ICwQnlxfaYmIxLdPOOpohC0UZrINYS4Xf901DKf8
 # ローカルでの動作方法
 
 以下のコマンドを順に実行。
-% git clone https://github.com/DDT1129/original-app.git
-% cd original-app
-% bundle install
-% yarn install
+% git clone https://github.com/DDT1129/original-app.git  
+% cd original-app  
+% bundle install  
+% yarn install  
 
 # 工夫したポイント
 
