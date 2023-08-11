@@ -46,7 +46,7 @@ https://originalapp-ddt.onrender.com/
 
 # 洗い出した要件
 
-
+https://docs.google.com/spreadsheets/d/1ICwQnlxfaYmIxLdPOOpohC0UZrINYS4Xf901DKf8Mb0/edit#gid=982722306
 
 # 実装した機能及び説明（画像）
 
