@@ -132,22 +132,24 @@ a.kaeru-box-b{
 
 .family-display{
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: stretch;
   background: #9be8e0;
   text-align: center;
   list-style: none;
   padding: 10px 0;  
-  justify-content: space-around;
-  margin: 0 100px;
+  justify-content: left;
+  margin: 0 auto;
+  max-width: 100%;
 }
 
 .display-list{
-  width: calc((100% - 400px) / 2);
+  width: calc(50% - 150px);
   border: solid 1px #333333;
   background: #cef9f5;
-  margin: 0 auto 50px;
-  border-radius: 300px;
+  margin: 0 70px 50px;
+  border-radius: 30px;
 }
 
 h3.family-name{
@@ -158,22 +160,25 @@ h3.family-name{
 
 .situation-image{
   position: relative;
-  height: 190px;
+  width: 100%;
+  text-align: center;
 }
 
 .frog-jamp-image{
   max-width: 15vw;
+  margin: 0 auto;
 }
 
-.task-mark-image{
+img.task-mark-image{
   max-width: 3vw;
   position: absolute;
-  bottom: 40px;
-  right: 120px;
+  bottom: 35px;
+  right: 130px;
 }
 
 .memo-ari{
   position: relative;
+  margin-top: auto;
 }
 
 a.memo-link{
@@ -248,6 +253,24 @@ a.memo-link{
   font-family: 'Noto Sans JP', sans-serif;
 }
 
-
-  
+/* 表示領域をviewportの設定 */
+/* メディアクエリとは、表示された画面幅に応じて適用するスタイルを切り替える機能,ブレークポイントとは、メディアクエリによって規定されるスタイル適用の分岐点を指します。
+@media (max-width: 500px){ }の場合は500pxがブレークポイント */
+/* パソコン表示 */
+p {
+  font-size: 30px;
+ }
  
+ /* タブレット表示時 */
+ @media (max-width: 1000px) {
+   p {
+     font-size: 25px;
+   }
+ }
+ 
+ /* スマホ表示時 画面幅が500px以下の時にのみ、pタグのfont-sizeを10px */
+ @media (max-width: 500px) {
+   p {
+     font-size: 20px;
+   }
+ } 
