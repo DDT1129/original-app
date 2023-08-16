@@ -6,9 +6,10 @@
 }
 
 .new-memo{
-  max-width: 100%;
+  max-width: 15vw;
   text-align: center;
   margin-bottom: 70px;
+  margin: auto;
 }
 
 a.new-memo-link{
