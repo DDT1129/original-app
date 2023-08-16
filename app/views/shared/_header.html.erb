@@ -4,7 +4,7 @@
     <%= image_tag("app.png", class:"app-ping-icon") %>
    
     <%= link_to 'BCON', root_path, class: "header-icon" %>
-    
+  
     <ul class='lists-right'>
       <% if user_signed_in? %>
         <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li>
