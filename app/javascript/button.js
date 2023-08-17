@@ -1,6 +1,6 @@
 window.addEventListener('load', function(){
   const pullDownButtons = document.getElementsByClassName("header-icon");
-  const buttons = document.querySelectorAll(".lists-right li, .new-memo");
+  const buttons = document.querySelectorAll(".lists-right li, .new-memo, .actions-button");
   const memolinks = document.querySelectorAll(".memo-link");
 
   for (const pullDownButton of pullDownButtons) {
