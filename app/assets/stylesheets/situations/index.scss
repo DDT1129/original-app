@@ -201,12 +201,23 @@ img.task-mark-image{
 a.memo-link{
   position: absolute;
   text-decoration: none;
-  color: red;
+  color: rgb(142, 2, 2);
   font-size: 18px;
   bottom: 40px;
   right: 10px;
   font-family: 'Noto Sans JP', sans-serif;
+  animation: colorChange 5s infinite alternate; /* 色変化アニメーションを適用 */
 }
+
+@keyframes colorChange {
+  0% {
+    color: #cef9f5;
+  }
+  100% {
+    color: #ff0000; /* 変化後の色 */
+  }
+}
+
 
 .datetime{
   font-weight: bold;
