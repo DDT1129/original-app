@@ -171,6 +171,19 @@ h3.family-name{
 .frog-jamp-image{
   max-width: 15vw;
   margin: 0 auto;
+  animation: rotateAnimation 9s infinite;
+}
+
+@keyframes rotateAnimation {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg); /* 180度で中間点で回転 */
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
 }
 
 img.task-mark-image{
