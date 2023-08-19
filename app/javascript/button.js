@@ -31,4 +31,13 @@ window.addEventListener('load', function(){
     });
   });
 
+  const memo_buttons = document.querySelectorAll(".memo-edit, .check-in-destroy, .memo-check-yes");
+  memo_buttons.forEach(function(memo_button) {
+    memo_button.addEventListener('mouseover', function() {
+      this.setAttribute("style", "color: orange;");
+    });
+    memo_button.addEventListener('mouseout', function() {
+      this.removeAttribute("style", "none");
+    });
+  });
 });
