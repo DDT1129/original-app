@@ -40,4 +40,14 @@ window.addEventListener('load', function(){
       this.removeAttribute("style", "none");
     });
   });
+
+  const menue_buttons = document.querySelectorAll(".kaeru-box-b");
+  menue_buttons.forEach(function(menue_button) {
+    menue_button.addEventListener('mouseover', function() {
+      this.setAttribute("style", "color: black;");
+    });
+    menue_button.addEventListener('mouseout', function() {
+      this.removeAttribute("style", "none");
+    });
+  });
 });
