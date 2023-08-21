@@ -50,4 +50,14 @@ window.addEventListener('load', function(){
       this.removeAttribute("style", "none");
     });
   });
+
+  const back_buttons = document.querySelectorAll(".memo-return-botton");
+  back_buttons.forEach(function(back_button) {
+    back_button.addEventListener('mouseover', function() {
+      this.setAttribute("style", "color: #64a19b;");
+    });
+    back_button.addEventListener('mouseout', function() {
+      this.removeAttribute("style", "none");
+    });
+  });
 });
