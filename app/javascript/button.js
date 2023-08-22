@@ -31,6 +31,16 @@ window.addEventListener('load', function(){
     });
   });
 
+  const family_code_links = document.querySelectorAll(".new-family-account");
+  family_code_links.forEach(function(family_code_link) {
+    family_code_link.addEventListener('mouseover', function() {
+      this.setAttribute("style", "color: darkGreen;");
+    });
+    family_code_link.addEventListener('mouseout', function() {
+      this.removeAttribute("style", "none");
+    });
+  });
+
   const memo_buttons = document.querySelectorAll(".memo-edit, .check-in-destroy, .memo-check-yes");
   memo_buttons.forEach(function(memo_button) {
     memo_button.addEventListener('mouseover', function() {
