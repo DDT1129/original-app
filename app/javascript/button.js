@@ -1,6 +1,6 @@
 window.addEventListener('load', function(){
   const pullDownButtons = document.getElementsByClassName("header-icon");
-  const buttons = document.querySelectorAll(".lists-right li, .new-memo");
+  const buttons = document.querySelectorAll(".lists-right li, .new-memo, .actions-button");
   const memolinks = document.querySelectorAll(".memo-link");
 
   for (const pullDownButton of pullDownButtons) {
@@ -31,4 +31,43 @@ window.addEventListener('load', function(){
     });
   });
 
+  const family_code_links = document.querySelectorAll(".new-family-account");
+  family_code_links.forEach(function(family_code_link) {
+    family_code_link.addEventListener('mouseover', function() {
+      this.setAttribute("style", "color: darkGreen;");
+    });
+    family_code_link.addEventListener('mouseout', function() {
+      this.removeAttribute("style", "none");
+    });
+  });
+
+  const memo_buttons = document.querySelectorAll(".memo-edit, .check-in-destroy, .memo-check-yes");
+  memo_buttons.forEach(function(memo_button) {
+    memo_button.addEventListener('mouseover', function() {
+      this.setAttribute("style", "color: orange;");
+    });
+    memo_button.addEventListener('mouseout', function() {
+      this.removeAttribute("style", "none");
+    });
+  });
+
+  const menue_buttons = document.querySelectorAll(".kaeru-box-b");
+  menue_buttons.forEach(function(menue_button) {
+    menue_button.addEventListener('mouseover', function() {
+      this.setAttribute("style", "color: black;");
+    });
+    menue_button.addEventListener('mouseout', function() {
+      this.removeAttribute("style", "none");
+    });
+  });
+
+  const back_buttons = document.querySelectorAll(".memo-return-botton");
+  back_buttons.forEach(function(back_button) {
+    back_button.addEventListener('mouseover', function() {
+      this.setAttribute("style", "color: #64a19b;");
+    });
+    back_button.addEventListener('mouseout', function() {
+      this.removeAttribute("style", "none");
+    });
+  });
 });

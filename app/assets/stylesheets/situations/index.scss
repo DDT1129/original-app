@@ -171,6 +171,19 @@ h3.family-name{
 .frog-jamp-image{
   max-width: 15vw;
   margin: 0 auto;
+  animation: rotateAnimation 9s infinite;
+}
+
+@keyframes rotateAnimation {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg); /* 180度で中間点で回転 */
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
 }
 
 img.task-mark-image{
@@ -188,12 +201,23 @@ img.task-mark-image{
 a.memo-link{
   position: absolute;
   text-decoration: none;
-  color: red;
+  color: rgb(142, 2, 2);
   font-size: 18px;
   bottom: 40px;
   right: 10px;
   font-family: 'Noto Sans JP', sans-serif;
+  animation: colorChange 5s infinite alternate; /* 色変化アニメーションを適用 */
 }
+
+@keyframes colorChange {
+  0% {
+    color: #cef9f5;
+  }
+  100% {
+    color: #ff0000; /* 変化後の色 */
+  }
+}
+
 
 .datetime{
   font-weight: bold;
@@ -269,6 +293,7 @@ p {
  @media (max-width: 1000px) {
    p {
      font-size: 25px;
+     overflow: auto;
    }
  }
  
@@ -276,5 +301,14 @@ p {
  @media (max-width: 500px) {
    p {
      font-size: 20px;
+     overflow: auto;
    }
  } 
+
+ body {
+  cursor: url('icons8-カーソル-26.png'), auto;
+}
+
+a:hover {
+  cursor:url('icons8-ハンドカーソル-50.png'), auto;
+}
