@@ -22,7 +22,7 @@ https://originalapp-ddt.onrender.com/
  - パスワード:d000000
 - ユーザー2
  - メールアドレス:2@test.com
- - パスワード:f000000
+ - パスワード:d000000
 
 # 利用方法
 
