@@ -17,6 +17,7 @@ https://originalapp-ddt.onrender.com/
 
 - Basic認証パスワード:aihonorin
 - Basic認証ID:8790
+- 現在、Basic認証は外してあります。
 - ユーザー1
  - メールアドレス:1@test.com
  - パスワード:d000000
