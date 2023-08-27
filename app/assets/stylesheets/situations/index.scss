@@ -152,15 +152,15 @@ a.kaeru-box-b{
 }
 
 .display-list{
-  width: calc(50% - 150px);
+  width: calc(50% - 8vw);
   border: solid 1px #333333;
   background: #cef9f5;
-  margin: 0 70px 50px;
+  margin: 0 4vw 2vw;
   border-radius: 30px;
 }
 
 h3.family-name{
-  font-size: 30px;
+  font-size: 3vw;
   margin: 0;
   font-family: 'Noto Sans JP', sans-serif;
 }
@@ -190,10 +190,11 @@ h3.family-name{
 }
 
 img.task-mark-image{
-  max-width: 3vw;
+  width: 5vw; /* 幅をビューポート幅の5%に設定 */
+  height: 5vh; /* 高さをビューポート高さの5%に設定 */
   position: absolute;
-  bottom: 35px;
-  right: 130px;
+  bottom: 5.6vh; /* 下端からの距離をビューポート高さの5%に設定 */
+  right: 9vw; /* 右端からの距離をビューポート幅の10%に設定 */
 }
 
 .memo-ari{
@@ -205,9 +206,9 @@ a.memo-link{
   position: absolute;
   text-decoration: none;
   color: rgb(142, 2, 2);
-  font-size: 18px;
-  bottom: 40px;
-  right: 10px;
+  font-size: 1.3vw;
+  bottom: 3vw;
+  right: 1vh;
   font-family: 'Noto Sans JP', sans-serif;
   animation: colorChange 5s infinite alternate; /* 色変化アニメーションを適用 */
 }
@@ -226,6 +227,7 @@ a.memo-link{
   font-weight: bold;
   padding-bottom: 10px;
   font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1.6vw;
 }
 
 .family-account-contents{
@@ -267,21 +269,24 @@ a.memo-link{
   font-weight: bolder;
   margin: auto;
   background-color: #9BD002;
-  font-size: larger;
+  font-size: 2.4vw;
   width: 15vw;
-
+  padding: 5px;
   border: #333333 solid 1px;
   margin: auto;
   background-color: #9BD002;
-  margin-bottom: 10px;
+  margin: 8px auto;
   border-radius: 15px;
 }
+
+
 
 .delet-botton{
   font-weight: bold;
   text-align: end;
-  padding-right: 25px;
+  padding-right: 24px;
   font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1.6vw;
 }
 
 /* 表示領域をviewportの設定 */
