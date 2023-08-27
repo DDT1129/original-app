@@ -66,23 +66,26 @@ a.new-family-account{
   max-width: 100%;
   height: auto;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
 }
 
-.menu-lists{
+ul.menu-lists{
   max-width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 0;
 }
+
 
 .kaeru-wrap-b{
   display: flex;
   flex-wrap: wrap;
-  padding-right: 77px;
   list-style:none;
   font-size: 20px;
   background: #9be8e0;
+}
+
+li.kaeru-wrap-b{
+  padding: 0 8px;
 }
 
 .kaeru-wrap-b:hover{
