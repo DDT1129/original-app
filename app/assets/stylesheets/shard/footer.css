@@ -11,9 +11,11 @@
   display:flex;
   justify-content: space-around;
   font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1.4vw;
 }
 
 .footer-lists{
+  padding: 0;
   display: flex;
   justify-content: space-around;
   list-style: none;
@@ -24,6 +26,7 @@
   color:#ffffff; 
   text-decoration: none;
   font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1.2vw;
 }
 
 .footer-page-icons{
@@ -33,7 +36,7 @@
 
 .footer-logo{
   color:#ffffff;
-  font-size: 15px;
+  font-size: 1.2vw;
   padding-right: 30px;
   padding-bottom: 5px;
   margin: 0;
