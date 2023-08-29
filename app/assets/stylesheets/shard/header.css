@@ -5,16 +5,15 @@
 .top-page-header{
   max-width: 100%;
   height: auto;
-  padding: 16vh ;
   display: flex;
   flex-direction: column;
   background-color: #9be8e0;
+  margin: 0;
+  padding: 0;
 }
 
 .top-page-h-contents{
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+  max-width: 100%;
   align-items: center;
 }
 
@@ -39,11 +38,13 @@ a.header-icon{
   flex-wrap: wrap;
   justify-content: flex-end;
   list-style: none;
-  width: 60vw;
+  width: 45vw;
+  margin: 0;
+  padding: 0;
 }
 
 .lists-right li {
-  margin-right: 24px; /* アイテム間の間隔を調整 */
+  margin-right: 2vw; /* アイテム間の間隔を調整 */
 }
 
 .login{
