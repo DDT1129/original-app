@@ -11,7 +11,7 @@
 }
 
 .sign-ex1{
-  font-size: 35px;
+  font-size: 2.4vw;
   text-align: center;
   color: #00863c;
   padding-bottom: 20px;
@@ -19,20 +19,17 @@
 }
 
 .sign-ex2{
-  font-size: 28px;
+  font-size: 2vw;
   text-align: center;
   color: #00863c;
   font-family: 'Noto Sans JP', sans-serif;
 }
 
 a.new-family-account{
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 30px;
+  text-decoration: underline;
+  color: #00863c;
+  font-size: 2vw;
   font-weight: lighter;
-  color:#64a19b;
-  border: solid #ffffff;
-  background: #ffffff;
   border-radius: 10px;
   font-family: 'Noto Sans JP', sans-serif;
 }
@@ -66,23 +63,26 @@ a.new-family-account{
   max-width: 100%;
   height: auto;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
 }
 
-.menu-lists{
+ul.menu-lists{
   max-width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 0;
 }
+
 
 .kaeru-wrap-b{
   display: flex;
   flex-wrap: wrap;
-  padding-right: 77px;
   list-style:none;
   font-size: 20px;
   background: #9be8e0;
+}
+
+li.kaeru-wrap-b{
+  padding: 0 8px;
 }
 
 .kaeru-wrap-b:hover{
@@ -131,7 +131,7 @@ a.kaeru-box-b{
   height: auto;
   text-align: center;
   font-family: 'Lilita One', cursive;
-  font-size: 70px;
+  font-size: 6vw;
 }
 
 .family-display{
@@ -149,15 +149,15 @@ a.kaeru-box-b{
 }
 
 .display-list{
-  width: calc(50% - 150px);
+  width: calc(50% - 8vw);
   border: solid 1px #333333;
   background: #cef9f5;
-  margin: 0 70px 50px;
+  margin: 0 4vw 2vw;
   border-radius: 30px;
 }
 
 h3.family-name{
-  font-size: 30px;
+  font-size: 3vw;
   margin: 0;
   font-family: 'Noto Sans JP', sans-serif;
 }
@@ -187,10 +187,11 @@ h3.family-name{
 }
 
 img.task-mark-image{
-  max-width: 3vw;
+  width: 5vw; /* 幅をビューポート幅の5%に設定 */
+  height: 5vh; /* 高さをビューポート高さの5%に設定 */
   position: absolute;
-  bottom: 35px;
-  right: 130px;
+  bottom: 5.6vh; /* 下端からの距離をビューポート高さの5%に設定 */
+  right: 9vw; /* 右端からの距離をビューポート幅の10%に設定 */
 }
 
 .memo-ari{
@@ -202,9 +203,9 @@ a.memo-link{
   position: absolute;
   text-decoration: none;
   color: rgb(142, 2, 2);
-  font-size: 18px;
-  bottom: 40px;
-  right: 10px;
+  font-size: 1.3vw;
+  bottom: 3vw;
+  right: 1vh;
   font-family: 'Noto Sans JP', sans-serif;
   animation: colorChange 5s infinite alternate; /* 色変化アニメーションを適用 */
 }
@@ -223,6 +224,7 @@ a.memo-link{
   font-weight: bold;
   padding-bottom: 10px;
   font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1.6vw;
 }
 
 .family-account-contents{
@@ -264,21 +266,24 @@ a.memo-link{
   font-weight: bolder;
   margin: auto;
   background-color: #9BD002;
-  font-size: larger;
+  font-size: 2.4vw;
   width: 15vw;
-
+  padding: 5px;
   border: #333333 solid 1px;
   margin: auto;
   background-color: #9BD002;
-  margin-bottom: 10px;
+  margin: 8px auto;
   border-radius: 15px;
 }
+
+
 
 .delet-botton{
   font-weight: bold;
   text-align: end;
-  padding-right: 25px;
+  padding-right: 24px;
   font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1.6vw;
 }
 
 /* 表示領域をviewportの設定 */

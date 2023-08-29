@@ -5,14 +5,14 @@
 .top-page-header{
   max-width: 100%;
   height: auto;
-  padding: 2vh 15vw;
+  padding: 16vh ;
   display: flex;
   flex-direction: column;
   background-color: #9be8e0;
 }
 
 .top-page-h-contents{
-  width: 75vw;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,7 +28,7 @@ a.header-icon{
   max-width: 20vw;
   margin: auto 0;
   padding-left: 15px;
-  font-size: 70px;
+  font-size: 6vw;
   color: #ffffff;
   text-decoration: none;
   font-family: 'Lilita One', cursive;
@@ -39,7 +39,11 @@ a.header-icon{
   flex-wrap: wrap;
   justify-content: flex-end;
   list-style: none;
-  width: 100vw;
+  width: 60vw;
+}
+
+.lists-right li {
+  margin-right: 24px; /* アイテム間の間隔を調整 */
 }
 
 .login{
@@ -47,11 +51,10 @@ a.header-icon{
   display: flex;
   text-decoration: none;
   color:#64a19b;
-  font-size: 30px;
+  font-size: 2.5vw;
   border: solid #ffffff;
   background: #ffffff;
   border-radius: 10px;
-  margin-right: 35px;
   font-family: 'Noto Sans JP', sans-serif;
 }
 
@@ -60,7 +63,7 @@ a.header-icon{
   display: flex;
   text-decoration: none;
   color:#64a19b;
-  font-size: 30px;
+  font-size: 2.5vw;
   border: solid #ffffff;
   background: #ffffff;
   border-radius: 10px;
@@ -72,11 +75,10 @@ a.header-icon{
   display: flex;
   text-decoration: none;
   color:#64a19b;
-  font-size: 30px;
+  font-size: 2.5vw;
   border: solid #ffffff;
   background: #ffffff;
   border-radius: 10px;
-  margin-right: 35px;
   font-family: 'Noto Sans JP', sans-serif;
 }
 
@@ -85,7 +87,7 @@ a.header-icon{
   display: flex;
   text-decoration: none;
   color:#64a19b;
-  font-size: 30px;
+  font-size: 2.5vw;
   border: solid #ffffff;
   background: #ffffff;
   border-radius: 10px;
