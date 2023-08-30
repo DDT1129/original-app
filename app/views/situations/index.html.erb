@@ -49,8 +49,8 @@
               <%= image_tag("frog-jamp.png", class:"frog-jamp-image") %>
               <% if s.user.memos.present?  %>
                 <div class="memo-ari">
-                <%= link_to "メモがあります", memos_path,class:"memo-link" %> 
-                <%= image_tag("task_mark.png", class:"task-mark-image") %>
+                <%= link_to "! メモがあります", memos_path,class:"memo-link" %> 
+                <%#= image_tag("task_mark.png", class:"task-mark-image") %>
                 </div>
               <% end %>
             <% end %>
@@ -58,8 +58,8 @@
               <%= image_tag("frog-sleep.png", class:"frog-jamp-image") %>
               <% if s.user.memos.present? %>
                 <div class="memo-ari">
-                <%= link_to "メモがあります", memos_path ,class:"memo-link" %> 
-                <%= image_tag("task_mark.png", class:"task-mark-image") %>
+                <%= link_to "! メモがあります", memos_path ,class:"memo-link" %> 
+                <%#= image_tag("task_mark.png", class:"task-mark-image") %>
                 </div>
               <% end %>
             <% end %>

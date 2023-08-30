@@ -227,20 +227,17 @@ img.task-mark-image{
   right: 9vw; /* 右端からの距離をビューポート幅の10%に設定 */
 }
 
-.memo-ari{
+/*.memo-ari{
   position: relative;
   margin-top: auto;
-}
+} */
 
 a.memo-link{
-  position: absolute;
   text-decoration: none;
   color: rgb(142, 2, 2);
-  font-size: 1.3vw;
-  bottom: 3vw;
-  right: 1vh;
+  font-size: 1.6vw;
   font-family: 'Noto Sans JP', sans-serif;
-  animation: colorChange 5s infinite alternate; /* 色変化アニメーションを適用 */
+  animation: colorChange 3s infinite alternate; /* 色変化アニメーションを適用 */
 }
 
 @keyframes colorChange {
