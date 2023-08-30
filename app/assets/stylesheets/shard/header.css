@@ -12,21 +12,24 @@
   padding: 0;
 }
 
+.header-left{
+  width: 60vw;
+}
+
 .top-page-h-contents{
   max-width: 100%;
   align-items: center;
 }
 
 .app-ping-icon{
-  width: 5vw;
+  font-size: 1vw;
   border-radius: 50px;
 }
 
 a.header-icon{
   white-space: nowrap;
-  max-width: 20vw;
   margin: auto 0;
-  padding-left: 15px;
+  padding-left: 1vw;
   font-size: 6vw;
   color: #ffffff;
   text-decoration: none;
@@ -38,13 +41,13 @@ a.header-icon{
   flex-wrap: wrap;
   justify-content: flex-end;
   list-style: none;
-  width: 45vw;
+  width: 40vw;
   margin: 0;
   padding: 0;
 }
 
 .lists-right li {
-  margin-right: 2vw; /* アイテム間の間隔を調整 */
+  margin-left: 2vw; /* アイテム間の間隔を調整 */
 }
 
 .login{
