@@ -8,12 +8,6 @@
   padding-bottom: 30px;
 }
 
-.container_title{
-  font-size: 30px;
-  font-family:Georgia, 'Times New Roman', Times, serif;
-  text-align: center;
-}
-
 .form-text-wrap {
   width: 100%;
   height: 80%;
@@ -36,21 +30,25 @@
   color: #FFFFFF;
   margin-right: 5px;
   padding: 0 5px;
+  border-radius: 5px;
 }
 
 .actions{
-  width: 100%;
+  width: 32vw;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
 }
 
 .actions-button{
-  font-size: 25px;
-  width: 50%;
+  width: 1.6vw;
   background: #1a5612;
   color: #FFFFFF;
-  height: 50px;
   border-radius: 5px;
+}
+
+input.actions-button{
+  font-size: 1.6vw;
 }
 
 .login-flash-message{
