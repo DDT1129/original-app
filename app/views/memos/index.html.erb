@@ -42,7 +42,8 @@
             </div>         
           </li>
         </div>
-        <div class="delet-botton">
+        
+        <div class="memodelet-botton">
             <% if m.completed? %>
               <%= link_to "未完了", incompleted_memo_path(m), method: :put, class:"memo-check-no" %>
             <% else %>
@@ -52,9 +53,9 @@
             <%= link_to "編集", edit_memo_path(m.id), class:"memo-edit" %>
             
             <%# if current_user.id == m.user_id %>
-              <%= link_to "削除", memo_path(m.id), method: :delete, class:"check-in-destroy" %>
+            <%= link_to "削除", memo_path(m.id), method: :delete, class:"check-in-destroy" %>
             <%# end %>
-            </div>
+        </div>
       <% end %>
     </ul>
   <% end %>

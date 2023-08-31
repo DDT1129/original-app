@@ -86,8 +86,12 @@ li{
   margin-left: 15px;
 }
 
-.delet-botton{
-  font-size: 1vw;
+.memodelet-botton{
+  font-weight: bold;
+  text-align: end;
+  padding-right: 24px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1.6vw;
   text-decoration: none;
   margin-bottom: 50px;
 }

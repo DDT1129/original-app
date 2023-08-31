@@ -145,17 +145,17 @@ a.kaeru-box-b{
 
   .kaeru-box-b::before,
   .kaeru-box-b::after {
-    height: 20px;
-    width: 20px;
-    top: -56px;
+    height: 23px;
+    width: 23px;
+    top: -58px;
   }
 
   .kaeru-box-b::before {
-    left: 60px;
+    left: 56px;
   }
 
   .kaeru-box-b::after {
-    right: 60px;
+    right: 56px;
   }
 }
 
@@ -251,10 +251,18 @@ a.memo-link{
 
 
 .datetime{
-  font-weight: bold;
-  padding-bottom: 10px;
+  max-width: 30vw;
+  margin: 8px auto;
+  border: #53c7bc solid 1px;
+  background-color: #53c7bc;
+  border-radius: 10px;
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 1.6vw;
+  padding: 8px 0;
+}
+
+.font-color-change{
+  font-size: 2vw;
 }
 
 .family-account-contents{
@@ -294,19 +302,19 @@ a.memo-link{
 
 .time-font-style{
   font-weight: bolder;
-  margin: auto;
-  background-color: #9BD002;
+  background-color: #53c7bc;
   font-size: 2.4vw;
-  width: 15vw;
-  padding: 5px;
-  border: #333333 solid 1px;
-  margin: auto;
-  background-color: #9BD002;
-  margin: 8px auto;
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: #53c7bc;
   border-radius: 15px;
+  font-weight: bold;
 }
 
-
+.post-time{
+  margin: 0 auto;
+  font-size: 1vw;
+}
 
 .delet-botton{
   font-weight: bold;
@@ -314,6 +322,7 @@ a.memo-link{
   padding-right: 24px;
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 1.6vw;
+  margin: 0;
 }
 
 /* 表示領域をviewportの設定 */
