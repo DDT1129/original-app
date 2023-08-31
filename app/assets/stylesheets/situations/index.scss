@@ -115,11 +115,11 @@ a.kaeru-box-b{
    background: #333333; 
    border: 1em solid #9BD002; 
    content:'';
-   top: -3em;
+   top: -3.3em;
    z-index: -10;
 }
-.kaeru-box-b::before { left: 0.8em;}
-.kaeru-box-b::after { right: 0.8em;}
+.kaeru-box-b::before { left: 4.8em;}
+.kaeru-box-b::after { right: 4.8em;}
 .kaeru-wrap-b{
   background-color: transparent;
   position: relative;
@@ -145,18 +145,18 @@ a.kaeru-box-b{
 
   .kaeru-box-b::before,
   .kaeru-box-b::after {
-    height: 3.5em;
-    width: 3.5em;
-    top: -7.5em;
+    height: 3em;
+    width: 3em;
+    top: -7em;
     border: 2em solid #9BD002;
   }
 
   .kaeru-box-b::before {
-    left: 0.1em;
+    left: 9em;
   }
 
   .kaeru-box-b::after {
-    right: 0.1em;
+    right: 9em;
   }
 }
 
