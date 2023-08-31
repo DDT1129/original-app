@@ -108,18 +108,18 @@ a.kaeru-box-b{
 
 .kaeru-box-b::before, 
 .kaeru-box-b::after {
-   height: 30px;
-   width: 30px;
+   height: 1.4em;
+   width: 1.4em;
    border-radius: 50%;
    position: absolute;
    background: #333333; 
-   border: 20px solid #9BD002; 
+   border: 1em solid #9BD002; 
    content:'';
-   top: -65px;
+   top: -3em;
    z-index: -10;
 }
-.kaeru-box-b::before { left: 100px;}
-.kaeru-box-b::after { right: 100px;}
+.kaeru-box-b::before { left: 0.8em;}
+.kaeru-box-b::after { right: 0.8em;}
 .kaeru-wrap-b{
   background-color: transparent;
   position: relative;
@@ -145,17 +145,18 @@ a.kaeru-box-b{
 
   .kaeru-box-b::before,
   .kaeru-box-b::after {
-    height: 23px;
-    width: 23px;
-    top: -58px;
+    height: 3.5em;
+    width: 3.5em;
+    top: -7.5em;
+    border: 2em solid #9BD002;
   }
 
   .kaeru-box-b::before {
-    left: 56px;
+    left: 0.1em;
   }
 
   .kaeru-box-b::after {
-    right: 56px;
+    right: 0.1em;
   }
 }
 
