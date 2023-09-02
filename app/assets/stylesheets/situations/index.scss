@@ -357,3 +357,20 @@ p {
 a:hover {
   cursor:url('icons8-ハンドカーソル-50.png'), auto;
 }
+
+.digital-clock {
+  width: 90%;
+  font-size: 3vw;
+  text-align: center;
+  margin: 0 auto 32px;
+  color: #fff;
+  background-color: #41ac9a;
+  padding: 10px;
+  border-radius: 10px;
+  
+
+}
+
+.time {
+  font-weight: bold;
+}
