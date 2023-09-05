@@ -53,21 +53,27 @@
           <div class="situation-image">
             <% if s.genre_id == 2 %>
               <%= image_tag("frog-jamp.png", class:"frog-jamp-image") %>
-              <% if s.user.memos.present?  %>
+              <div class="memo-ararm">
+                <% if s.user.memos.present? %>
                 <div class="memo-ari">
-                <%= link_to "! メモがあります", memos_path,class:"memo-link" %> 
+                <%= link_to "メモがあります", memos_path ,class:"memo-link" %> 
+                <div class="memo-count">(<%= s.user.memos.count %>)</div>
                 <%#= image_tag("task_mark.png", class:"task-mark-image") %>
                 </div>
-              <% end %>
+                <% end %>
+              </div>
             <% end %>
             <% if s.genre_id == 3 %>
               <%= image_tag("frog-sleep.png", class:"frog-jamp-image") %>
-              <% if s.user.memos.present? %>
+              <div class="memo-ararm">
+                <% if s.user.memos.present? %>
                 <div class="memo-ari">
-                <%= link_to "! メモがあります", memos_path ,class:"memo-link" %> 
+                <%= link_to "メモがあります", memos_path ,class:"memo-link" %> 
+                <div class="memo-count">(<%= s.user.memos.count %>)</div>
                 <%#= image_tag("task_mark.png", class:"task-mark-image") %>
                 </div>
-              <% end %>
+                <% end %>
+              </div>
             <% end %>
           </div>
 

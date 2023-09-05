@@ -228,10 +228,15 @@ img.task-mark-image{
   right: 9vw; /* 右端からの距離をビューポート幅の10%に設定 */
 }
 
-/*.memo-ari{
-  position: relative;
-  margin-top: auto;
-} */
+.memo-ari{
+  display: flex;
+  margin: 0 auto;
+}
+
+.memo-ararm{
+  display: flex;
+  justify-content: center;
+}
 
 a.memo-link{
   text-decoration: none;
@@ -239,6 +244,12 @@ a.memo-link{
   font-size: 1.6vw;
   font-family: 'Noto Sans JP', sans-serif;
   animation: colorChange 3s infinite alternate; /* 色変化アニメーションを適用 */
+}
+
+.memo-count{
+  color: red;
+  font-size: 1.6vw;
+  font-weight: bold;
 }
 
 @keyframes colorChange {
