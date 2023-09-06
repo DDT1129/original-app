@@ -250,6 +250,7 @@ a.memo-link{
   color: red;
   font-size: 1.6vw;
   font-weight: bold;
+  animation: colorChange 3s infinite alternate; /* 色変化アニメーションを適用 */
 }
 
 @keyframes colorChange {
